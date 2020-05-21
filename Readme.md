@@ -1,4 +1,5 @@
 # Asoriba Payment
+<<<<<<< HEAD
 - Create an account at https://app.mybusinesspay.com.
 - Upload your documents for account verification.
 
@@ -22,3 +23,5 @@ initialize the payment
 
 Create a payment for ussd only
 ` pay = cbs.initialize("amount", "first_name", "last_name", "phonenumber") `
+=======
+>>>>>>> 6cbacc849fe490e4a008f2e9bcfe8056f1128830
