@@ -9,7 +9,7 @@ Create a virutual environment
 `python3 -m venv venv`
 
 Activate the virutualenv
-`source venv\bin\activate`
+`source venv/bin/activate`
 
 Install the requirements
 `pip install -r requirements.txt`
