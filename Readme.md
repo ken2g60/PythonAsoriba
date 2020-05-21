@@ -18,7 +18,7 @@ import the file into your project
 ` from asoriba.pay import Asoriba`
 
 initialize the payment
-` pay = Asoriba("pubkey", "webhook url", "Product Name", "Description") `
+` cbs = Asoriba("pubkey", "webhook url", "Product Name", "Description") `
 
 Create a payment for ussd only
 ` pay = cbs.initialize("amount", "first_name", "last_name", "phonenumber") `
