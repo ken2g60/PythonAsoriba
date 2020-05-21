@@ -1,5 +1,6 @@
 # USSD Payment Asoriba
 import requests
+import json
 import logging
 import uuid
 
@@ -105,28 +106,8 @@ class Asoriba:
             return response["status"]
             
         except Exception as e:
-            print(e)
-            
-            
-    def payment_response(self):
-        try:
-            req = requests.post("https://app.mybusinesspay.com/payment/v1.0/card/payment/result")
-            response = req.json()
-            return response["transaction_uuid"]
-        except Exception as e:
-            print(e)
-    
-    def verify(self, transaction_uuid):
-        try:
-            req = requests.post("https://app.mybusinesspay.com/payment/v1.0/verify",
-                                headers={
-                                    "Authorization": "Bearer " + self.pub_key,
-                                    "Content-Type": "application/json"
-                                },
-                                json={
-                                    "transaction_uuid": self.payment_response
-                                })
-            response = req.json()
-            return response["status_code"]
-        except Exception as e:
-            print(e)
+            print(e)   
+
+cbs = Asoriba("AQgtEY1-IgeEpipZIqCn2r2Am2UCuVAknlRUnS327DwWQTFM2uWDN2ulAGc_", "http://94a43152.ngrok.io/webhook/", "Service Name", "Description")
+# debit 
+pay = cbs.initialize("0.1", "ken", "arthur", "0269452522")
